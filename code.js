@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
        const img = document.createElement('img');
        img.src = `https:${data.current.condition.icon}`;
        tdIcon.innerText = data.current.condition.icon;
-       tr.appendChild(tdIcon);
+       tdIcon.appendChild(img);
        tableData.appendChild(tr);
        
      }
