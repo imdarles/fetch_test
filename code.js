@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    const fetchData = async (cityName) => {
      try {
-       const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}&aqi=no&lang=ru');
+       const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${cityName}&aqi=no&lang=ru`);
        const responseJSON = await response.json();
        return responseJSON;
      } catch (error) {
