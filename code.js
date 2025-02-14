@@ -32,7 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
        const tdWeather = document.createElement('td');
        tdWeather.innerText = data.current.condition.text;
        tr.appendChild(tdWeather);
+       const tdIcon = document.createElement('td');
+       tdIcon.innerText = data.current.condition.icon;
+       tr.appendChild(tdIcon);
        tableData.appendChild(tr);
+       
      }
   }) 
 });
