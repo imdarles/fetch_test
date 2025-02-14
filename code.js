@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
      } catch (error) {
        console.log('error', error);
      }
-}
+   }
 
   buttonSearch.addEventListener('click', async () => {
      const name = searchText.value;
@@ -24,7 +24,5 @@ document.addEventListener("DOMContentLoaded", () => {
        const data = await fetchData(name);
        console.log(data);
      }
-
   }) 
-
 });
