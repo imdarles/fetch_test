@@ -1,0 +1,11 @@
+body {
+  padding: 20px;
+  height: 100%;
+}
+
+.search {
+  display: flex;
+  algin-items: center;
+  justify-content: space-beetween;
+  gap: 10px;
+}
