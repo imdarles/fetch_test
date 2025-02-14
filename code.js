@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
   const apiKey = 'ffedd3150ec0466d8fb82414251402';
 
-  const searchText = document.getElementById('searchText')
-  const buttonSearch = document.getElementById('buttonSearch')
-  const tableData = document.getElementById('tableData')
+  const searchText = document.getElementById('searchText');
+  const buttonSearch = document.getElementById('buttonSearch');
+  const tableData = document.getElementById('tableData').querySelector('tbody');
  
 
    const fetchData = async (cityName) => {
@@ -22,7 +22,17 @@ document.addEventListener("DOMContentLoaded", () => {
        alert('Введите название города');
      } else {
        const data = await fetchData(name);
-       console.log(data);
+       const tr = document.createElement('tr');
+       const tdName = document.createElement('td');
+       tdName.innerHtml = name;
+       tr.appendChild(tdName);
+       const tdTemp = document.createElement('td');
+       tdTemp.innerHtml = data.current.temp_c;
+       tr.appendChild(tdTemp);
+       const tdWeather = document.createElement('td');
+       tdWeather.innerHtml = data.current.condition.text;
+       tr.appendChild(tdWeather);
+       tableData.appendChild(tr);
      }
   }) 
 });
