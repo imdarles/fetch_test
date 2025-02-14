@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
        tdWeather.innerText = data.current.condition.text;
        tr.appendChild(tdWeather);
        const tdIcon = document.createElement('td');
+       const img = document.createElement('img');
+       img.src = `https:${data.current.condition.icon}`;
        tdIcon.innerText = data.current.condition.icon;
        tr.appendChild(tdIcon);
        tableData.appendChild(tr);
