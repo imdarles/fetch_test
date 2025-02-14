@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
        tr.appendChild(tdWeather);
        const tdIcon = document.createElement('td');
        const img = document.createElement('img');
-       img.src = ("data.current.condition.icon");
+       img.src = data.current.condition.icon;
        img.alt = 'Иконка';
        tdIcon.innerText = data.current.condition.icon;
        tdIcon.appendChild(img);
