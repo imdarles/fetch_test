@@ -24,13 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
        const data = await fetchData(name);
        const tr = document.createElement('tr');
        const tdName = document.createElement('td');
-       tdName.innerHtml = name;
+       tdName.innerText = name;
        tr.appendChild(tdName);
        const tdTemp = document.createElement('td');
-       tdTemp.innerHtml = data.current.temp_c;
+       tdTemp.innerText = data.current.temp_c;
        tr.appendChild(tdTemp);
        const tdWeather = document.createElement('td');
-       tdWeather.innerHtml = data.current.condition.text;
+       tdWeather.innerText = data.current.condition.text;
        tr.appendChild(tdWeather);
        tableData.appendChild(tr);
      }
