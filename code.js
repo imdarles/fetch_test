@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
        img.alt = 'Иконка';
        tdIcon.innerText = data.current.condition.icon;
        tdIcon.appendChild(img);
+       tr.appendChild(tdIcon);
        tableData.appendChild(tr);
        
      }
