@@ -35,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
        const tdIcon = document.createElement('td');
        const img = document.createElement('img');
        img.src = `https:${data.current.condition.icon}`;
+       img.alt = 'Иконка';
        tdIcon.innerText = data.current.condition.icon;
        tdIcon.appendChild(img);
        tableData.appendChild(tr);
