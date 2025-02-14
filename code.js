@@ -9,5 +9,4 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchData('Yaroslavl');
   fetchData('Moscow');
   fetchData('Sochi');
- 
 });
